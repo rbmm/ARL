@@ -15,5 +15,5 @@ dll loaded (if no error) until message box from EXE shown and then unloaded. in 
 of couse code clean all resources/memory after self. dlls loaded and unloaded. shell code free own memory too (at the on of execution he do JMP to NtFreeVirtualMemory )
 code implemented for x86/x64. of course use shell in x64 much more easy.
 
-[1.png](1.png)
-[0.png](0.png)
+![1.png](1.png)
+![0.png](0.png)
