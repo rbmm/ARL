@@ -574,7 +574,7 @@ NTSTATUS LoadLibraryFromMem(_Out_ void** phmod,
 							_In_ PCUNICODE_STRING lpFileName)
 {
 	GUID RtlpAddVectoredHandler = { 0x1FC98BCA, 0x1BA9, 0x4397, { 0x93, 0xF9, 0x34, 0x9E, 0xAD, 0x41, 0xE0, 0x57 } };
-	
+
 	ULONG_PTR OldValue;
 	RtlSetProtectedPolicy(&RtlpAddVectoredHandler, 0, &OldValue);
 

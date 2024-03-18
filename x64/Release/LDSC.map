@@ -1,15 +1,15 @@
  LDSC
 
- Timestamp is 65f77441 (Mon Mar 18 00:52:49 2024)
+ Timestamp is 65f85726 (Mon Mar 18 17:00:54 2024)
 
  Preferred load address is 0000000140000000
 
  Start         Length     Name                   Class
  0001:00000000 00000160H .text$mn                CODE
  0001:00000160 000004ccH .text$mn$asm            CODE
- 0001:0000062c 00000c94H .text$mn$cpp            CODE
- 0001:000012c0 00000044H .text$mn$cpp$s          CODE
- 0001:00001304 0000001aH .text$mn$end            CODE
+ 0001:0000062c 00000d04H .text$mn$cpp            CODE
+ 0001:00001330 00000044H .text$mn$cpp$s          CODE
+ 0001:00001374 0000001aH .text$mn$end            CODE
  0002:00000000 00000050H .idata$5                DATA
  0002:00000050 00000048H .rdata                  DATA
  0002:00000098 00000030H .rdata$voltmd           DATA
@@ -94,16 +94,16 @@
  0001:00000618       memcpy                     0000000140001618 f   code64.obj
  0001:0000062c       ?GetFuncAddress@@YAPEAXPEBD@Z 000000014000162c f   load.obj
  0001:00000790       ?FindNoCfgDll@@YAJKPEAU_UNICODE_STRING@@@Z 0000000140001790 f   load.obj
- 0001:00000a74       ?ProtectEx@@YAJPEAX_KK0PEAH@Z 0000000140001a74 f   load.obj
- 0001:00000b80       ?OverwriteSection@@YAJPEAX0PEAU_IMAGE_NT_HEADERS64@@0@Z 0000000140001b80 f   load.obj
- 0001:00000e14       ?retFromMapViewOfSection@@YAJJ@Z 0000000140001e14 f   load.obj
- 0001:00000ed0       ?MyVexHandler@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140001ed0 f   load.obj
- 0001:00000fac       ?LoadLibraryFromMem@@YAJPEAPEAXPEAX1PEAU_IMAGE_NT_HEADERS64@@PEBU_UNICODE_STRING@@@Z 0000000140001fac f   load.obj
- 0001:0000117c       ?LoadLibraryFromMem@@YAJPEAX0@Z 000000014000217c f   load.obj
- 0001:000012c0       ??_C@_1BG@NCCDOFIB@?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2?$AA?2@FNODOBFM@ 00000001400022c0     load.obj
- 0001:000012e0       ??_C@_1M@HNNPBALB@?$AA?$CK?$AA?4?$AAd?$AAl?$AAl@FNODOBFM@ 00000001400022e0     load.obj
- 0001:000012f0       ??_C@_0BD@PPCCBCGB@ZwMapViewOfSection@FNODOBFM@ 00000001400022f0     load.obj
- 0001:00001304       ?SizeOfShellCode@@YA_KXZ   0000000140002304 f   load.obj
+ 0001:00000ae0       ?ProtectEx@@YAJPEAX_KK0PEAH@Z 0000000140001ae0 f   load.obj
+ 0001:00000bec       ?OverwriteSection@@YAJPEAX0PEAU_IMAGE_NT_HEADERS64@@0@Z 0000000140001bec f   load.obj
+ 0001:00000e80       ?retFromMapViewOfSection@@YAJJ@Z 0000000140001e80 f   load.obj
+ 0001:00000f3c       ?MyVexHandler@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140001f3c f   load.obj
+ 0001:00001018       ?LoadLibraryFromMem@@YAJPEAPEAXPEAX1PEAU_IMAGE_NT_HEADERS64@@PEBU_UNICODE_STRING@@@Z 0000000140002018 f   load.obj
+ 0001:000011e8       ?LoadLibraryFromMem@@YAJPEAX0@Z 00000001400021e8 f   load.obj
+ 0001:00001330       ??_C@_1BG@NCCDOFIB@?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2?$AA?2@FNODOBFM@ 0000000140002330     load.obj
+ 0001:00001350       ??_C@_1M@HNNPBALB@?$AA?$CK?$AA?4?$AAd?$AAl?$AAl@FNODOBFM@ 0000000140002350     load.obj
+ 0001:00001360       ??_C@_0BD@PPCCBCGB@ZwMapViewOfSection@FNODOBFM@ 0000000140002360     load.obj
+ 0001:00001374       ?SizeOfShellCode@@YA_KXZ   0000000140002374 f   load.obj
  0002:00000000       __imp_CreateFileW          0000000140003000     kernel32:KERNEL32.dll
  0002:00000008       __imp_WriteFile            0000000140003008     kernel32:KERNEL32.dll
  0002:00000010       __imp_GetLastError         0000000140003010     kernel32:KERNEL32.dll
