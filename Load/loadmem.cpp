@@ -345,7 +345,8 @@ LONG NTAPI MyVexHandler(::PEXCEPTION_POINTERS ExceptionInfo)
 	::PEXCEPTION_RECORD ExceptionRecord = ExceptionInfo->ExceptionRecord;
 	::PCONTEXT ContextRecord = ExceptionInfo->ContextRecord;
 	
-	if (ExceptionRecord->ExceptionCode == STATUS_SINGLE_STEP && ExceptionRecord->ExceptionAddress == ZwMapViewOfSection)
+	if (ExceptionRecord->ExceptionCode == STATUS_SINGLE_STEP && 
+		ExceptionRecord->ExceptionAddress == (PVOID)ContextRecord->Dr3)
 	{
 		if (IMAGE_Ctx* ctx = IMAGE_Ctx::get())
 		{
