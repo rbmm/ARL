@@ -1,0 +1,6 @@
+
+EXPORTS
+
+SpLsaModeInitialize
+DllRegisterServer	PRIVATE	
+DllUnregisterServer	PRIVATE	
