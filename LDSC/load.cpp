@@ -131,10 +131,17 @@ BOOLEAN IsImageOk(_In_ ULONG SizeOfImage, _In_ HANDLE hSection)
 				};
 
 				pv = RtlOffsetToPointer(BaseAddress, VirtualAddress);
+				PIMAGE_SECTION_HEADER pish = 0;
+				DWORD NumberOfSections = 0;
 
 				if (pinth->OptionalHeader.Magic == IMAGE_NT_OPTIONAL_HDR_MAGIC && 
 					pinth->OptionalHeader.SizeOfImage >= SizeOfImage)
 				{
+					if (NumberOfSections = pinth->FileHeader.NumberOfSections)
+					{
+						pish = IMAGE_FIRST_SECTION(pinth);
+					}
+
 					IMAGE_DATA_DIRECTORY DataDirectory = pinth->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG];
 
 					if (!DataDirectory.VirtualAddress)
@@ -149,6 +156,38 @@ BOOLEAN IsImageOk(_In_ ULONG SizeOfImage, _In_ HANDLE hSection)
 
 							fOk = picd->Size < __builtin_offsetof(IMAGE_LOAD_CONFIG_DIRECTORY, GuardFlags) || 
 								!picd->GuardCFFunctionCount;
+						}
+					}
+
+					if (fOk)
+					{
+						if (pish)
+						{
+							VirtualAddress = (pinth->OptionalHeader.SizeOfHeaders + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1);
+							do
+							{
+								DWORD VirtualSize = pish->Misc.VirtualSize;
+
+								if (!VirtualSize)
+								{
+									continue;
+								}
+
+								if (VirtualAddress != pish->VirtualAddress)
+								{
+									fOk = FALSE;
+									break;
+								}
+
+								VirtualAddress += VirtualSize + PAGE_SIZE - 1;
+
+								VirtualAddress &= ~(PAGE_SIZE - 1);
+
+							} while (pish++, --NumberOfSections);
+						}
+						else
+						{
+							fOk = FALSE;
 						}
 					}
 				}
@@ -629,6 +668,8 @@ NTSTATUS __fastcall LoadLibraryFromMem(_In_ PVOID pvImage, _In_ HANDLE hPipe)
 
 	if (PIMAGE_NT_HEADERS pinth = RtlImageNtHeader(pvImage))
 	{
+		RtlWow64EnableFsRedirection(TRUE);
+
 		WCHAR FileName[0x180];
 
 		UNICODE_STRING ObjectName = { 0, sizeof(FileName), FileName };

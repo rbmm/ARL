@@ -133,6 +133,8 @@ NtApi RtlAddVectoredExceptionHandler
 NtApi RtlRemoveVectoredExceptionHandler
 NtApi RtlSetProtectedPolicy
 
+NtApi RtlWow64EnableFsRedirection
+
 NtApi memset
 NtApi memcpy
 

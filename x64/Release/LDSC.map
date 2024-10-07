@@ -1,22 +1,22 @@
  LDSC
 
- Timestamp is 65f85726 (Mon Mar 18 17:00:54 2024)
+ Timestamp is 6703c4cf (Mon Oct  7 14:23:59 2024)
 
  Preferred load address is 0000000140000000
 
  Start         Length     Name                   Class
  0001:00000000 00000160H .text$mn                CODE
- 0001:00000160 000004ccH .text$mn$asm            CODE
- 0001:0000062c 00000d04H .text$mn$cpp            CODE
- 0001:00001330 00000044H .text$mn$cpp$s          CODE
- 0001:00001374 0000001aH .text$mn$end            CODE
+ 0001:00000160 000004f4H .text$mn$asm            CODE
+ 0001:00000654 00000d2cH .text$mn$cpp            CODE
+ 0001:00001380 00000044H .text$mn$cpp$s          CODE
+ 0001:000013c4 0000001aH .text$mn$end            CODE
  0002:00000000 00000050H .idata$5                DATA
  0002:00000050 00000048H .rdata                  DATA
  0002:00000098 00000030H .rdata$voltmd           DATA
- 0002:000000c8 000000dcH .xdata                  DATA
- 0002:000001a4 00000000H .edata                  DATA
- 0002:000001a4 00000014H .idata$2                DATA
- 0002:000001b8 00000018H .idata$3                DATA
+ 0002:000000c8 000000e0H .xdata                  DATA
+ 0002:000001a8 00000000H .edata                  DATA
+ 0002:000001a8 00000014H .idata$2                DATA
+ 0002:000001bc 00000014H .idata$3                DATA
  0002:000001d0 00000050H .idata$4                DATA
  0002:00000220 00000094H .idata$6                DATA
  0003:00000000 00000000H .data                   DATA
@@ -49,6 +49,7 @@
  0000:00000000       __hybrid_auxiliary_iat_copy 0000000000000000     <absolute>
  0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
  0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __hybrid_image_info_bitfield 0000000000000000     <absolute>
  0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
  0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
  0001:00000000       ?PrepareCode@@YAJPEB_WPEA_K_K@Z 0000000140001000 f   FileName.obj
@@ -90,20 +91,21 @@
  0001:0000058a       RtlAddVectoredExceptionHandler 000000014000158a f   code64.obj
  0001:000005b5       RtlRemoveVectoredExceptionHandler 00000001400015b5 f   code64.obj
  0001:000005e3       RtlSetProtectedPolicy      00000001400015e3 f   code64.obj
- 0001:00000605       memset                     0000000140001605 f   code64.obj
- 0001:00000618       memcpy                     0000000140001618 f   code64.obj
- 0001:0000062c       ?GetFuncAddress@@YAPEAXPEBD@Z 000000014000162c f   load.obj
- 0001:00000790       ?FindNoCfgDll@@YAJKPEAU_UNICODE_STRING@@@Z 0000000140001790 f   load.obj
- 0001:00000ae0       ?ProtectEx@@YAJPEAX_KK0PEAH@Z 0000000140001ae0 f   load.obj
- 0001:00000bec       ?OverwriteSection@@YAJPEAX0PEAU_IMAGE_NT_HEADERS64@@0@Z 0000000140001bec f   load.obj
- 0001:00000e80       ?retFromMapViewOfSection@@YAJJ@Z 0000000140001e80 f   load.obj
- 0001:00000f3c       ?MyVexHandler@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140001f3c f   load.obj
- 0001:00001018       ?LoadLibraryFromMem@@YAJPEAPEAXPEAX1PEAU_IMAGE_NT_HEADERS64@@PEBU_UNICODE_STRING@@@Z 0000000140002018 f   load.obj
- 0001:000011e8       ?LoadLibraryFromMem@@YAJPEAX0@Z 00000001400021e8 f   load.obj
- 0001:00001330       ??_C@_1BG@NCCDOFIB@?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2?$AA?2@FNODOBFM@ 0000000140002330     load.obj
- 0001:00001350       ??_C@_1M@HNNPBALB@?$AA?$CK?$AA?4?$AAd?$AAl?$AAl@FNODOBFM@ 0000000140002350     load.obj
- 0001:00001360       ??_C@_0BD@PPCCBCGB@ZwMapViewOfSection@FNODOBFM@ 0000000140002360     load.obj
- 0001:00001374       ?SizeOfShellCode@@YA_KXZ   0000000140002374 f   load.obj
+ 0001:00000605       RtlWow64EnableFsRedirection 0000000140001605 f   code64.obj
+ 0001:0000062d       memset                     000000014000162d f   code64.obj
+ 0001:00000640       memcpy                     0000000140001640 f   code64.obj
+ 0001:00000654       ?GetFuncAddress@@YAPEAXPEBD@Z 0000000140001654 f   load.obj
+ 0001:000007c0       ?FindNoCfgDll@@YAJKPEAU_UNICODE_STRING@@@Z 00000001400017c0 f   load.obj
+ 0001:00000b20       ?ProtectEx@@YAJPEAX_KK0PEAH@Z 0000000140001b20 f   load.obj
+ 0001:00000c2c       ?OverwriteSection@@YAJPEAX0PEAU_IMAGE_NT_HEADERS64@@0@Z 0000000140001c2c f   load.obj
+ 0001:00000ec8       ?retFromMapViewOfSection@@YAJJ@Z 0000000140001ec8 f   load.obj
+ 0001:00000f88       ?MyVexHandler@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140001f88 f   load.obj
+ 0001:00001068       ?LoadLibraryFromMem@@YAJPEAPEAXPEAX1PEAU_IMAGE_NT_HEADERS64@@PEBU_UNICODE_STRING@@@Z 0000000140002068 f   load.obj
+ 0001:00001238       ?LoadLibraryFromMem@@YAJPEAX0@Z 0000000140002238 f   load.obj
+ 0001:00001380       ??_C@_1BG@NCCDOFIB@?$AA?2?$AAs?$AAy?$AAs?$AAt?$AAe?$AAm?$AA3?$AA2?$AA?2@FNODOBFM@ 0000000140002380     load.obj
+ 0001:000013a0       ??_C@_1M@HNNPBALB@?$AA?$CK?$AA?4?$AAd?$AAl?$AAl@FNODOBFM@ 00000001400023a0     load.obj
+ 0001:000013b0       ??_C@_0BD@PPCCBCGB@ZwMapViewOfSection@FNODOBFM@ 00000001400023b0     load.obj
+ 0001:000013c4       ?SizeOfShellCode@@YA_KXZ   00000001400023c4 f   load.obj
  0002:00000000       __imp_CreateFileW          0000000140003000     kernel32:KERNEL32.dll
  0002:00000008       __imp_WriteFile            0000000140003008     kernel32:KERNEL32.dll
  0002:00000010       __imp_GetLastError         0000000140003010     kernel32:KERNEL32.dll
@@ -119,10 +121,10 @@
  0002:00000070       ??_C@_1M@OAIMIKLP@?$AAn?$AAt?$AAd?$AAl?$AAl@ 0000000140003070     FileName.obj
  0002:00000080       ??_C@_1BI@LHFAMNP@?$AAs?$AAc?$AA?9?$AAl?$AAo?$AAa?$AAd?$AA?4?$AAa?$AAs?$AAm@ 0000000140003080     FileName.obj
  0002:00000098       __volatile_metadata        0000000140003098     <linker-defined>
- 0002:000001a4       __IMPORT_DESCRIPTOR_KERNEL32 00000001400031a4     kernel32:KERNEL32.dll
- 0002:000001b8       __NULL_IMPORT_DESCRIPTOR   00000001400031b8     kernel32:KERNEL32.dll
+ 0002:000001a8       __IMPORT_DESCRIPTOR_KERNEL32 00000001400031a8     kernel32:KERNEL32.dll
+ 0002:000001bc       __NULL_IMPORT_DESCRIPTOR   00000001400031bc     kernel32:KERNEL32.dll
  0003:00000000       __imp_sprintf_s            0000000140004000     FileName.obj
- 0003:00000008       __@@_PchSym_@00@UfhvihUsziibUxeoUgnkUcGEUivovzhvUowhxUhgwzucOlyq@4B2008FD98C1DD4 0000000140004008     stdafx.obj
+ 0003:00000008       __@@_PchSym_@00@UfhvihUsziibUwlxfnvmghUtrgsfyUzioUgnkUcGEUivovzhvUowhxUhgwzucOlyq@4B2008FD98C1DD4 0000000140004008     stdafx.obj
 
  entry point at        0001:0000011c
 
@@ -132,11 +134,11 @@
  0002:000000c8       $unwind$?PrepareCode@@YAJPEB_WPEA_K_K@Z 00000001400030c8     FileName.obj
  0002:000000e0       $unwind$?ep@@YAXPEAX@Z     00000001400030e0     FileName.obj
  0002:000000e8       $unwind$?GetFuncAddress@@YAPEAXPEBD@Z 00000001400030e8     load.obj
- 0002:00000100       $unwind$?FindNoCfgDll@@YAJKPEAU_UNICODE_STRING@@@Z 0000000140003100     load.obj
- 0002:0000011c       $unwind$?ProtectEx@@YAJPEAX_KK0PEAH@Z 000000014000311c     load.obj
- 0002:0000012c       $unwind$?OverwriteSection@@YAJPEAX0PEAU_IMAGE_NT_HEADERS64@@0@Z 000000014000312c     load.obj
- 0002:00000144       $unwind$?retFromMapViewOfSection@@YAJJ@Z 0000000140003144     load.obj
- 0002:0000015c       $unwind$?MyVexHandler@@YAJPEAU_EXCEPTION_POINTERS@@@Z 000000014000315c     load.obj
- 0002:00000168       $unwind$?LoadLibraryFromMem@@YAJPEAPEAXPEAX1PEAU_IMAGE_NT_HEADERS64@@PEBU_UNICODE_STRING@@@Z 0000000140003168     load.obj
- 0002:00000188       $unwind$?LoadLibraryFromMem@@YAJPEAX0@Z 0000000140003188     load.obj
+ 0002:00000104       $unwind$?FindNoCfgDll@@YAJKPEAU_UNICODE_STRING@@@Z 0000000140003104     load.obj
+ 0002:00000120       $unwind$?ProtectEx@@YAJPEAX_KK0PEAH@Z 0000000140003120     load.obj
+ 0002:00000130       $unwind$?OverwriteSection@@YAJPEAX0PEAU_IMAGE_NT_HEADERS64@@0@Z 0000000140003130     load.obj
+ 0002:00000148       $unwind$?retFromMapViewOfSection@@YAJJ@Z 0000000140003148     load.obj
+ 0002:00000160       $unwind$?MyVexHandler@@YAJPEAU_EXCEPTION_POINTERS@@@Z 0000000140003160     load.obj
+ 0002:0000016c       $unwind$?LoadLibraryFromMem@@YAJPEAPEAXPEAX1PEAU_IMAGE_NT_HEADERS64@@PEBU_UNICODE_STRING@@@Z 000000014000316c     load.obj
+ 0002:0000018c       $unwind$?LoadLibraryFromMem@@YAJPEAX0@Z 000000014000318c     load.obj
  0002:000002a6       .idata$6                   00000001400032a6     kernel32:KERNEL32.dll

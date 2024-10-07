@@ -1,9 +1,5 @@
 #include "stdafx.h"
 
-#ifndef PAGE_SIZE
-#define PAGE_SIZE 0x1000
-#endif // !PAGE_SIZE
-
 BOOLEAN IsImageOk(_In_ ULONG SizeOfImage, _In_ HANDLE hSection)
 {
 	BOOLEAN fOk = FALSE;
@@ -64,7 +60,7 @@ BOOLEAN IsImageOk(_In_ ULONG SizeOfImage, _In_ HANDLE hSection)
 				{
 					if (pish)
 					{
-						VirtualAddress = PAGE_SIZE;
+						VirtualAddress = (pinth->OptionalHeader.SizeOfHeaders + PAGE_SIZE - 1) & ~(PAGE_SIZE - 1);
 						do
 						{
 							DWORD VirtualSize = pish->Misc.VirtualSize;
@@ -448,6 +444,8 @@ NTSTATUS LoadLibraryFromMem(_Out_ void** phmod, _In_ PVOID pvImage)
 			return STATUS_IMAGE_MACHINE_TYPE_MISMATCH;
 		}
 		
+		RtlWow64EnableFsRedirection(TRUE);
+
 		WCHAR FileName[0x180];
 		UNICODE_STRING ObjectName = { 0, sizeof(FileName), FileName };
 
