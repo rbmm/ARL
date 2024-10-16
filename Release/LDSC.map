@@ -1,14 +1,14 @@
  LDSC
 
- Timestamp is 6703c500 (Mon Oct  7 14:24:48 2024)
+ Timestamp is 671041bf (Thu Oct 17 01:44:15 2024)
 
  Preferred load address is 00400000
 
  Start         Length     Name                   Class
  0001:00000000 00000110H .text$mn                CODE
  0001:00000110 000004f4H .text$mn$asm            CODE
- 0001:00000604 00000abeH .text$mn$cpp            CODE
- 0001:000010c2 00000011H .text$mn$end            CODE
+ 0001:00000604 00000acaH .text$mn$cpp            CODE
+ 0001:000010ce 00000011H .text$mn$end            CODE
  0002:00000000 00000028H .idata$5                DATA
  0002:00000028 00000040H .rdata                  DATA
  0002:00000068 00000000H .edata                  DATA
@@ -98,15 +98,15 @@
  0001:00000604       ?GetFuncAddress@@YIPAXPAU_IMAGE_DOS_HEADER@@PBD@Z 00401604 f   load.obj
  0001:00000742       ?GetFuncAddress@@YIPAXPBD@Z 00401742 f   load.obj
  0001:0000075c       ?IsImageOk@@YGEKPAX@Z      0040175c f   load.obj
- 0001:0000085e       ?FindNoCfgDll@@YGJKPAU_UNICODE_STRING@@@Z 0040185e f   load.obj
- 0001:00000a4a       ?get@IMAGE_Ctx@@SGPAU1@XZ  00401a4a f i load.obj
- 0001:00000a70       ?ProtectEx@@YGJPAXKK0PAH@Z 00401a70 f   load.obj
- 0001:00000b0c       ?OverwriteSection@@YGJPAX0PAU_IMAGE_NT_HEADERS@@0@Z 00401b0c f   load.obj
- 0001:00000d64       ?retFromMapViewOfSection@@YIJJ@Z 00401d64 f   load.obj
- 0001:00000dc0       ?MyVexHandler@@YGJPAU_EXCEPTION_POINTERS@@@Z 00401dc0 f   load.obj
- 0001:00000e5c       ?LoadLibraryFromMem@@YGJPAPAXPAX1PAU_IMAGE_NT_HEADERS@@PBU_UNICODE_STRING@@@Z 00401e5c f   load.obj
- 0001:00000fe4       ?LoadLibraryFromMem@@YIJPAX0@Z 00401fe4 f   load.obj
- 0001:000010c2       ?SizeOfShellCode@@YGKXZ    004020c2 f   load.obj
+ 0001:0000086a       ?FindNoCfgDll@@YGJKPAU_UNICODE_STRING@@@Z 0040186a f   load.obj
+ 0001:00000a56       ?get@IMAGE_Ctx@@SGPAU1@XZ  00401a56 f i load.obj
+ 0001:00000a7c       ?ProtectEx@@YGJPAXKK0PAH@Z 00401a7c f   load.obj
+ 0001:00000b18       ?OverwriteSection@@YGJPAX0PAU_IMAGE_NT_HEADERS@@0@Z 00401b18 f   load.obj
+ 0001:00000d70       ?retFromMapViewOfSection@@YIJJ@Z 00401d70 f   load.obj
+ 0001:00000dcc       ?MyVexHandler@@YGJPAU_EXCEPTION_POINTERS@@@Z 00401dcc f   load.obj
+ 0001:00000e68       ?LoadLibraryFromMem@@YGJPAPAXPAX1PAU_IMAGE_NT_HEADERS@@PBU_UNICODE_STRING@@@Z 00401e68 f   load.obj
+ 0001:00000ff0       ?LoadLibraryFromMem@@YIJPAX0@Z 00401ff0 f   load.obj
+ 0001:000010ce       ?SizeOfShellCode@@YGKXZ    004020ce f   load.obj
  0002:00000000       __imp__CreateFileW@28      00403000     kernel32:KERNEL32.dll
  0002:00000004       __imp__WriteFile@20        00403004     kernel32:KERNEL32.dll
  0002:00000008       __imp__GetLastError@0      00403008     kernel32:KERNEL32.dll
