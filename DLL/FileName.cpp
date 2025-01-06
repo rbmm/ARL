@@ -63,10 +63,14 @@ BOOLEAN WINAPI DllMain(HMODULE hmod, DWORD dwReason, HANDLE hThread)
 	case DLL_PROCESS_ATTACH:
 		DisableThreadLibraryCalls(hmod);
 		_G_TlsIndex = TlsAlloc();
-		if (hThread = CreateThread(0, 0, DemoThread, 0, 0, 0))
+		if (GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS, (PCWSTR)hmod, &hmod))
 		{
-			CloseHandle(hThread);
-			break;
+			if (hThread = CreateThread(0, 0, DemoThread, 0, 0, 0))
+			{
+				CloseHandle(hThread);
+				break;
+			}
+			FreeLibrary(hmod);
 		}
 		return FALSE;
 	case DLL_PROCESS_DETACH:
